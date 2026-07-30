@@ -81,7 +81,9 @@ _ACCOUNT_SELECTION_RECOVERY_DEFAULT_SLEEP_SECONDS = 30.0
 _ACCOUNT_SELECTION_RECOVERY_MAX_SLEEP_SECONDS = 300.0
 _ACCOUNT_SELECTION_RECOVERY_HEARTBEAT_SECONDS = 10.0
 _ACCOUNT_SELECTION_RETRY_HINT_RE = re.compile(r"try again in\s+([0-9]+(?:\.[0-9]+)?)s", re.IGNORECASE)
-_LOCAL_ACCOUNT_CAP_ERROR_CODES = frozenset({"account_response_create_cap", "account_stream_cap"})
+_LOCAL_ACCOUNT_CAP_ERROR_CODES = frozenset(
+    {"account_response_create_cap", "account_stream_cap", "api_key_stream_fair_share"}
+)
 _ACCOUNT_MODEL_UNSUPPORTED_ERROR_CODE = "account_model_unsupported"
 _PROPAGATED_CAPACITY_STARTUP_WAIT: ContextVar[asyncio.Event | None] = ContextVar(
     "propagated_capacity_startup_wait",
@@ -1313,7 +1315,7 @@ def _is_account_neutral_error_code(code: str | None) -> bool:
 
 
 def _is_local_account_cap_code(code: str | None) -> bool:
-    return code in {"account_response_create_cap", "account_stream_cap"}
+    return code in _LOCAL_ACCOUNT_CAP_ERROR_CODES
 
 
 def _http_error_status_from_payload(payload: dict[str, JsonValue] | None) -> int | None:
