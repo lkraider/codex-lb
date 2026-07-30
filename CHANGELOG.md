@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.23.0](https://github.com/Soju06/codex-lb/compare/v1.22.0...v1.23.0) (2026-07-30)
+
+
+### Features
+
+* **helm:** support creating an application-specific Gateway ([#1462](https://github.com/Soju06/codex-lb/issues/1462)) ([8461203](https://github.com/Soju06/codex-lb/commit/8461203cabece3511bc9259baca5c0711c4d6618))
+* **proxy:** support Codex Live Voice sideband ([#1492](https://github.com/Soju06/codex-lb/issues/1492)) ([aa642f3](https://github.com/Soju06/codex-lb/commit/aa642f33c6c9bd83c1aea8e7e8618e1ad2bf50c2))
+* **report-ui:** add per-chart visibility filter ([a2adfa0](https://github.com/Soju06/codex-lb/commit/a2adfa0f17fe6ea0c62a34f5a0882559e6e41172))
+* **rollups:** permanent hourly usage rollups with raw live-tail reads ([#1478](https://github.com/Soju06/codex-lb/issues/1478)) ([f85fbcb](https://github.com/Soju06/codex-lb/commit/f85fbcbd88330b0fa7600dcc4d66d3a4bbcb0be1))
+* **ui:** complete zh-CN dashboard translations ([#1436](https://github.com/Soju06/codex-lb/issues/1436)) ([79a42ce](https://github.com/Soju06/codex-lb/commit/79a42ce6d0f408b8d80b6d0bb280a6393bcba5f2))
+
+
+### Bug Fixes
+
+* **auth:** restrict guest access to sensitive request data ([#1497](https://github.com/Soju06/codex-lb/issues/1497)) ([73aa50e](https://github.com/Soju06/codex-lb/commit/73aa50eafe446e542897b6007a5778fdacb9a2ae))
+* **db:** correct PostgreSQL pool budget ([#1519](https://github.com/Soju06/codex-lb/issues/1519)) ([68a2bc1](https://github.com/Soju06/codex-lb/commit/68a2bc14fe3e2932208d1e8996931da427ce7ec4))
+* **helm:** calculate aggregate 5xx error rate ([#1522](https://github.com/Soju06/codex-lb/issues/1522)) ([b883d69](https://github.com/Soju06/codex-lb/commit/b883d69dc6e2123a08ec84b9ea992adf30d2b28e))
+* **http-bridge:** wait before retrying model capacity ([#1395](https://github.com/Soju06/codex-lb/issues/1395)) ([448b239](https://github.com/Soju06/codex-lb/commit/448b239c4db8170fc8c559fbe27f57f2ccfb9874))
+* **proxy:** attribute bridge failure fan-out request logs to each request's API key ([#1540](https://github.com/Soju06/codex-lb/issues/1540)) ([3fe0d6f](https://github.com/Soju06/codex-lb/commit/3fe0d6f286019a0505783d803db9a1d8cdf6b307))
+* **proxy:** extend websocket stream budget ([#1353](https://github.com/Soju06/codex-lb/issues/1353)) ([de2c5fc](https://github.com/Soju06/codex-lb/commit/de2c5fc09ef54c22dec3664c292812c3e8af1846))
+* **proxy:** preserve fresh bridge full resends ([#1486](https://github.com/Soju06/codex-lb/issues/1486)) ([b5a515f](https://github.com/Soju06/codex-lb/commit/b5a515f0d28cd3e3f67a68e7b8ed21dd8f5c7ccf))
+* **proxy:** release idle bridge sessions' account stream leases ([#1476](https://github.com/Soju06/codex-lb/issues/1476)) ([9349040](https://github.com/Soju06/codex-lb/commit/934904045837a1c23fc260b2fb38927040f7e6d3))
+* **proxy:** sequence synthetic Responses failures ([#1479](https://github.com/Soju06/codex-lb/issues/1479)) ([6f6af9b](https://github.com/Soju06/codex-lb/commit/6f6af9b3a6862d0bc239183b68edbe2cb6439864))
+* **proxy:** spill unanchored forks on account caps ([#1499](https://github.com/Soju06/codex-lb/issues/1499)) ([0284251](https://github.com/Soju06/codex-lb/commit/0284251be49f29e473c4a09c3f8de5415b3b16f8))
+* **reports:** use local days for daily averages ([#1525](https://github.com/Soju06/codex-lb/issues/1525)) ([eefce19](https://github.com/Soju06/codex-lb/commit/eefce19d63982f9b5138fb8893a6ba00a3a05a68))
+
+
+### Documentation
+
+* add README hero banner image ([#1516](https://github.com/Soju06/codex-lb/issues/1516)) ([e9273d2](https://github.com/Soju06/codex-lb/commit/e9273d209798a787eb58c9f24f8d0d643e381259))
+* **contributing:** require beta soak before stable releases ([#1469](https://github.com/Soju06/codex-lb/issues/1469)) ([3e9e36a](https://github.com/Soju06/codex-lb/commit/3e9e36aaee059d5824e9ba9bcb3897d0ce23dc3a))
+* **contributors:** restore chronological contributor order ([#1518](https://github.com/Soju06/codex-lb/issues/1518)) ([b91d9bb](https://github.com/Soju06/codex-lb/commit/b91d9bb8768edbfda6d232a4bc2fa013053519fc))
+
 ## [1.22.0](https://github.com/Soju06/codex-lb/compare/v1.21.0...v1.22.0) (2026-07-24)
 
 
